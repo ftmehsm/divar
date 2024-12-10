@@ -15,7 +15,7 @@ class AuthService {
     const user = await this.#model.findOne({ mobile });
     const now = new Date().getTime();
     const otp = {
-      code: randomInt(10000, 99999),
+      code: 12345,
       expiresIn: now + 1000 * 60 * 2,
     };
     console.log(otp);
