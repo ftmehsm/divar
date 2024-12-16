@@ -21,7 +21,7 @@ function Posts() {
                 <img className="w-[100px] h-[100px] rounded-sm object-cover" src={`${import.meta.env.VITE_BASE_URL}/${post.images[0]}`} alt="" />
                 <div className="flex flex-col">
                 <span className="text-md font-bold text-gray-700">{post.options.title}</span>
-                <span className="text-sm text-gray-500">{sp(post.amount)}</span>
+                <span className="text-sm text-gray-500">{sp(post.amount)} ریال</span>
                     <span className="text-sm text-Primary"> {new Date(post.createdAt).toLocaleDateString("fa-IR")}</span>
                 </div>
             </div>)}
