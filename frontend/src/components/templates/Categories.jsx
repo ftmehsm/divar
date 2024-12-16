@@ -60,6 +60,7 @@ function Categories() {
                             className="w-7 h-7 object-contain"
                             src={`${category.icon}.svg`}
                             alt={category.name}
+                            onError={(e) => (e.currentTarget.src = "/category.svg")}
                         />
                         <span className="text-gray-700 text-sm">{category.name}</span>
                     </div>
