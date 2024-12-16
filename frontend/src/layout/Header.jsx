@@ -28,6 +28,7 @@ function Header() {
     document.cookie = "refreshToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
     queryClient.invalidateQueries({queryKey : ['userProfile']});
     setIsDropdownOpen(false); // بستن منو
+    if(isMenuOpen) setIsMenuOpen(false);
   }
 
   const clickHandler = () => {
@@ -47,6 +48,9 @@ function Header() {
                 <ul className="flex flex-col items-center  gap-3 p-3 ">
                     <Link to="auth/"  onClick={() => setIsMenuOpen(false)}>پنل کاربری</Link>
                     {data && data.data.role === "ADMIN" && <Link to="/admin" onClick={() => setIsMenuOpen(false)}>پنل ادمین</Link>}
+                    {document.cookie && <div className="cursor-pointer" onClick={exitHandler}>
+                                خروج
+                     </div>}
                 </ul>
             </div>}
             <button onClick={menuOpener} className="md:hidden">
