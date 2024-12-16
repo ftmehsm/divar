@@ -7,7 +7,7 @@ import {useEffect} from "react";
 
 function PostDetail() {
     const {id} = useParams()
-    const {data , isPending , refetch} = useQuery(({queryKey:["post"] , queryFn : () => getPost(id)}))
+    const {data , isPending , refetch} = useQuery(({queryKey:["post"] , queryFn : () => getPost(id) , gcTime : 0}))
     const post = data?.data?.post
 
     useEffect(()=>{
