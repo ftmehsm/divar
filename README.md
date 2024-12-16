@@ -29,4 +29,10 @@ Divar Website is a web application designed to offer users a platform for buying
 2. **run backend** :
    ```
    cd backend
+   npm install
    npm start
+2. **run frontend** :
+   ```
+   cd frontend
+   npm install
+   npm run dev
