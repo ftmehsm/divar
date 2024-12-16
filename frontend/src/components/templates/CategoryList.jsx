@@ -36,7 +36,7 @@ function CategoryList() {
           className="flex justify-between items-center font-Vazir-Medium border mb-3 p-1 rounded-md"
         >
           <div className="flex justify-between">
-            <img src={`${item.icon}.svg`} alt="icom" className="ml-3" />
+            <img src={`${item.icon}.svg`} alt="icon" className="ml-3" onError={(e) => (e.currentTarget.src = "/category.svg")} />
             <h5 className="ml-10">{item.name}</h5>
             <p className=" text-Primary">{item.slug}</p>
           </div>
