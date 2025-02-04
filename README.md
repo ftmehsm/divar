@@ -36,3 +36,8 @@ Divar Website is a web application designed to offer users a platform for buying
    cd frontend
    npm install
    npm run dev
+3. **login** :
+   ```
+   login with any phone number
+   constant otp : 12345
+
